@@ -1,0 +1,54 @@
+[2021-08-17 11:41:01,946] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2218: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/morningStaging", CM_morningStaging))
+
+[2021-08-17 11:41:01,956] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: message_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:41:01,957] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: channel_post_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:41:01,957] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: edited_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:41:01,957] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2219: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/nightStaging", CM_nightStaging))
+
+[2021-08-17 11:41:14,305] (INFO) [149426409 Mixson] Msg: /error
+[2021-08-17 11:41:15,259] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 46, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 67, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 2068, in CM_error
+    c = b/a
+ZeroDivisionError: division by zero
+
+[2021-08-17 11:41:15,259] (ERROR) division by zero
+[2021-08-17 11:43:04,870] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2267: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/morningStaging", CM_morningStaging))
+
+[2021-08-17 11:43:04,871] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: message_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:43:04,871] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: channel_post_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:43:04,871] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: edited_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-17 11:43:04,871] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2268: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/nightStaging", CM_nightStaging))
+
+[2021-08-17 11:43:11,005] (INFO) [149426409 Mixson] Msg: /error
+[2021-08-17 11:43:12,030] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 46, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 67, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 2111, in CM_error
+    c = b/a
+ZeroDivisionError: division by zero
+
+[2021-08-17 11:43:12,030] (ERROR) division by zero
+[2021-08-17 11:43:14,896] (INFO) [149426409 Mixson] Msg: /getRegularStaging
+[2021-08-17 11:43:48,246] (INFO) [149426409 Mixson] Msg: /showQueueSetDeployStatus

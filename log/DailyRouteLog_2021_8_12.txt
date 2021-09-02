@@ -1,0 +1,36 @@
+[2021-08-12 10:50:31,773] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/test/testPrintStackTrace.py", line 48, in <module>
+    c = a/b
+ZeroDivisionError: division by zero
+
+[2021-08-12 11:24:20,150] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2199: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/morningStaging", CM_morningStaging))
+
+[2021-08-12 11:24:20,162] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: message_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-12 11:24:20,163] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: channel_post_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-12 11:24:20,163] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: edited_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-12 11:24:20,163] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2200: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/nightStaging", CM_nightStaging))
+
+[2021-08-12 11:32:22,078] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 44, in inner_function
+    func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 2049, in CM_error
+    c = b/a
+ZeroDivisionError: division by zero
+
+[2021-08-12 11:32:22,078] (ERROR) division by zero
+[2021-08-12 11:43:42,035] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 541, in main
+    getFunction(functionName)(functionLogicData)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 340, in RF_queueSetEdit
+    startHour = int(startTime[:-2])
+ValueError: invalid literal for int() with base 10: ''
+
+[2021-08-12 11:43:42,035] (ERROR) invalid literal for int() with base 10: ''

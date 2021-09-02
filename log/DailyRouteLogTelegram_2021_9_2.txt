@@ -1,0 +1,200 @@
+[2021-09-02 14:08:19,681] (INFO) [1910765771 Mixon] Msg: /lowerBattery 7118
+[2021-09-02 14:08:22,499] (INFO) 2021-09-02 14:08:19.895567
+7118 (10.39.10.118): {'battery': '82', 'direction': '90', 'exclude': '1', 'excludeStr': 'Exclude', 'podCode': '', 'podDir': '', 'posX': '146375', 'posY': '96904', 'robotCode': '7118', 'robotIp': '10.39.10.118', 'status': '4', 'statusStr': 'Idle task', 'stop': '0', 'stopStr': 'No'}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:08:36,861] (INFO) [1910765771 Mixon] Msg: /resumeBattery 7118
+[2021-09-02 14:08:39,081] (INFO) 2021-09-02 14:08:37.366270
+7118 (10.39.10.118): {'battery': '30', 'direction': '180', 'exclude': '1', 'excludeStr': 'Exclude', 'podCode': '', 'podDir': '', 'posX': '146371', 'posY': '96901', 'robotCode': '7118', 'robotIp': '10.39.10.118', 'status': '5', 'statusStr': 'Robot stopped', 'stop': '1', 'stopStr': 'Yes'}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:09:10,064] (INFO) [1910765771 Mixon] Msg: /excludeAGV 7118
+[2021-09-02 14:10:04,188] (INFO) [1910765771 Mixon] Msg: /resumeAGV 7118
+[2021-09-02 14:10:05,311] (INFO) 2021-09-02 14:10:04.330941
+{"code":"0","data":"","message":"successful","reqCode":"17BA5213CFE6RC7","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:10:13,183] (INFO) [1910765771 Mixon] Msg: /stopAGV 7118
+[2021-09-02 14:10:14,203] (INFO) 2021-09-02 14:10:13.244671
+{"code":"0","data":"","message":"successful","reqCode":"17BA5215FC66RCF","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:10:24,693] (INFO) [1910765771 Mixon] Msg: /stopAGV 7118
+[2021-09-02 14:10:25,713] (INFO) 2021-09-02 14:10:24.745128
+{"code":"0","data":"","message":"successful","reqCode":"17BA5218CB36RCN","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:10:33,104] (INFO) [1910765771 Mixon] Msg: /resumeAGV 7118
+[2021-09-02 14:10:34,154] (INFO) 2021-09-02 14:10:33.151096
+{"code":"0","data":"","message":"successful","reqCode":"17BA521AD846RCP","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:10:53,894] (INFO) [1910765771 Mixon] Msg: /stopAGV 7118 7195
+[2021-09-02 14:10:55,261] (INFO) 2021-09-02 14:10:53.989017
+{"code":"0","data":"","message":"successful","reqCode":"17BA521FEEF6RD0","rowCount":0}
+{"code":"0","data":"","message":"successful","reqCode":"17BA521FF6F6RDB","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:11:06,360] (INFO) [1910765771 Mixon] Msg: /resumeAGV 7118 7195
+[2021-09-02 14:11:07,572] (INFO) 2021-09-02 14:11:06.415794
+{"code":"0","data":"","message":"successful","reqCode":"17BA5222F756RDJ","rowCount":0}
+{"code":"0","data":"","message":"successful","reqCode":"17BA5222FE46RDL","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:22:08,104] (INFO) [1910765771 Mixon] Msg: /excludeAGV 7195
+[2021-09-02 14:22:09,703] (INFO) 2021-09-02 14:22:08.170508
+{"code":"0","data":"","message":"successful","reqCode":"17BA52C486D6RMW","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:22:16,663] (INFO) [1910765771 Mixon] Msg: /cancelExcludeAGV 7195
+[2021-09-02 14:22:17,663] (INFO) 2021-09-02 14:22:16.713229
+{"code":"0","data":"","message":"successful","reqCode":"17BA52C69CB6RMY","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:22:34,698] (INFO) [1910765771 Mixon] Msg: /excludeAGV 7195
+[2021-09-02 14:22:35,709] (INFO) 2021-09-02 14:22:34.787657
+{"code":"0","data":"","message":"successful","reqCode":"17BA52CB06A6RN7","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:23:00,254] (INFO) [1910765771 Mixon] Msg: /getAGVStatus 7195
+[2021-09-02 14:23:01,430] (INFO) 2021-09-02 14:23:00.300342
+7195: {'battery': '78', 'direction': '-90', 'exclude': '1', 'excludeStr': 'Exclude', 'podCode': '', 'podDir': '', 'posX': '161816', 'posY': '59020', 'robotCode': '7195', 'robotIp': '10.39.10.195', 'status': '5', 'statusStr': 'Robot stopped', 'stop': '1', 'stopStr': 'Yes', 'taskCode': '2697469', 'taskStatus': '2'}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:24:17,827] (INFO) [1910765771 Mixon] Msg: /getAGVStatus 7195
+[2021-09-02 14:24:18,033] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 47, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 68, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 2509, in CM_getAGVStatus
+    for key, value in agvStatusDict.items:
+TypeError: 'builtin_function_or_method' object is not iterable
+
+[2021-09-02 14:24:18,033] (ERROR) 'builtin_function_or_method' object is not iterable
+[2021-09-02 14:24:46,155] (INFO) [1910765771 Mixon] Msg: /getAGVStatus 7195
+[2021-09-02 14:24:49,978] (INFO) 2021-09-02 14:24:46.219123
+7195: battery: 78
+direction: -96
+exclude: 1
+excludeStr: Exclude
+podCode: 
+podDir: 
+posX: 161806
+posY: 57319
+robotCode: 7195
+robotIp: 10.39.10.195
+status: 5
+statusStr: Robot stopped
+stop: 1
+stopStr: Yes
+taskCode: 2697469
+taskStatus: 2
+
+
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:25:18,259] (INFO) [1910765771 Mixon] Msg: /getAGVStatus 7195
+[2021-09-02 14:25:19,863] (INFO) 2021-09-02 14:25:18.333822
+7195:
+ 	battery: 78
+	direction: -96
+	exclude: 1
+	excludeStr: Exclude
+	podCode: 
+	podDir: 
+	posX: 161805
+	posY: 57319
+	robotCode: 7195
+	robotIp: 10.39.10.195
+	status: 5
+	statusStr: Robot stopped
+	stop: 1
+	stopStr: Yes
+	taskCode: 2697469
+	taskStatus: 2
+
+
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:25:41,860] (INFO) [1910765771 Mixon] Msg: /getAGVStatus 7273
+[2021-09-02 14:25:42,866] (INFO) 2021-09-02 14:25:41.937478
+7273:
+ 	battery: 85
+	direction: 90
+	exclude: 0
+	excludeStr: Normal
+	podCode: 
+	podDir: 
+	posX: 146370
+	posY: 92401
+	robotCode: 7273
+	robotIp: 10.39.9.173
+	status: 4
+	statusStr: Idle task
+	stop: 0
+	stopStr: No
+	taskCode: 2696997
+	taskStatus: 2
+
+
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:27:50,461] (INFO) [1910765771 Mixon] Msg: /cancelExcludeAGV 7195
+[2021-09-02 14:27:51,480] (INFO) 2021-09-02 14:27:50.525761
+{"code":"0","data":"","message":"successful","reqCode":"17BA53181BE6RQI","rowCount":0}
+
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:57:58,548] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1200 1255
+[2021-09-02 14:57:58,549] (INFO) /addRegularStaging 1200 1255
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:58:08,985] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 47, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 62, in inner_function
+    fullName = update.message.from_user.full_name
+AttributeError: 'NoneType' object has no attribute 'from_user'
+
+[2021-09-02 14:58:08,986] (ERROR) 'NoneType' object has no attribute 'from_user'
+[2021-09-02 14:59:12,284] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1200 1255 1
+[2021-09-02 14:59:12,285] (INFO) /addRegularStaging 1200 1255 1
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 14:59:56,424] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1200 1255 1
+[2021-09-02 14:59:56,425] (INFO) /addRegularStaging 1200 1255 1
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:00:10,500] (INFO) [1910765771 Mixon] Msg: /deleteRegularStaging 1255 1
+[2021-09-02 15:00:14,988] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1200 1255 1
+[2021-09-02 15:00:14,989] (INFO) /addRegularStaging 1200 1255 1
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:00:21,776] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1200 1256 1
+[2021-09-02 15:00:21,776] (INFO) /addRegularStaging 1200 1256 1
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:01:17,031] (INFO) [1910765771 Mixon] Msg: /getRegularStaging
+[2021-09-02 15:01:46,531] (INFO) [1910765771 Mixon] Msg: /getRegularStaging
+[2021-09-02 15:04:43,872] (INFO) [1910765771 Mixon] Msg: /getRegularStaging
+[2021-09-02 15:05:01,844] (INFO) [1910765771 Mixon] Msg: /getRegularStaging
+[2021-09-02 15:17:54,672] (INFO) [1910765771 Mixon] Msg: /deleteRegularStaging 1200 1256
+[2021-09-02 15:17:54,674] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 47, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 68, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/telegramBot.py", line 736, in CM_deleteRegularStaging
+    workingStagingList.remove(timeDict)
+ValueError: list.remove(x): x not in list
+
+[2021-09-02 15:17:54,674] (ERROR) list.remove(x): x not in list
+[2021-09-02 15:18:07,115] (INFO) [1910765771 Mixon] Msg: /getRegularStaging
+[2021-09-02 15:19:25,123] (INFO) [1910765771 Mixon] Msg: /deleteRegularStaging 1200 1256
+[2021-09-02 15:20:27,085] (INFO) [1910765771 Mixon] Msg: /deleteRegularStaging 1200 1256
+[2021-09-02 15:21:53,183] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1521 1523
+[2021-09-02 15:21:53,184] (INFO) /addRegularStaging 1521 1523
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:27:22,281] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1527 1530
+[2021-09-02 15:27:22,282] (INFO) /addRegularStaging 1527 1530
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:27:34,642] (INFO) [1910765771 Mixon] Msg: /deleteRegularStaging 1527 1530
+[2021-09-02 15:27:44,606] (INFO) [1910765771 Mixon] Msg: /addRegularStaging 1527 1530 1
+[2021-09-02 15:27:44,607] (INFO) /addRegularStaging 1527 1530 1
+{'id': 1910765771, 'type': 'private', 'first_name': 'Mixon'}
+[2021-09-02 15:27:52,283] (INFO) [1910765771 Mixon] Msg: /getRegularStaging

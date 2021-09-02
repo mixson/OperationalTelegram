@@ -1,0 +1,6 @@
+[2021-06-16 14:21:42,537] (INFO) RF_dailyStaging: Open Staging,  setting: 2021-06-16 14:20:00.407753 to 2021-06-16 14:22:00.407753
+[2021-06-16 14:22:24,976] (INFO) RF_dailyStaging: Close Staging,  setting: 2021-06-16 14:20:00.976672 to 2021-06-16 14:22:00.976672
+[2021-06-16 16:30:46,799] (INFO) 2021-06-16 16:30:45.949889
+default is activated
+[2021-06-16 17:08:35,148] (INFO) RF_dailyStaging: Open Staging,  setting: 2021-06-16 17:08:00.092679 to 2021-06-16 17:10:00.092679
+[2021-06-16 17:10:22,564] (INFO) RF_dailyStaging: Close Staging,  setting: 2021-06-16 17:08:00.808862 to 2021-06-16 17:10:00.808862

@@ -1,0 +1,2 @@
+[2021-06-15 13:28:25,650] (INFO) Hello World
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}

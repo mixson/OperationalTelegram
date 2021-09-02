@@ -1,0 +1,39 @@
+telegram token
+
+test button function
+
+test editing xml file and save it
+    serach target archor
+
+    input dialog
+    validate input values
+
+
+
+secutity enhancement
+    enhance the validation machanism
+        adding password into input parameter
+        elimate amap chance of malicious code injection
+    edit the welcome button and page --( done)
+    log all the editing record (all telegram info)
+
+------------------------
+
+scheduled release all function
+
+
+1) Cron Programme
+checking databse
+    when who function
+
+
+2) Interface
+adding schedule function
+    three params -- startTime endTime releaseTime
+        adding into database
+
+review list function
+
+edit list function(delete)
+
+

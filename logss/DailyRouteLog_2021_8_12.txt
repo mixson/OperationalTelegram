@@ -1,0 +1,5 @@
+[2021-08-12 10:50:51,092] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/test/testPrintStackTrace.py", line 48, in <module>
+    c = a/b
+ZeroDivisionError: division by zero
+

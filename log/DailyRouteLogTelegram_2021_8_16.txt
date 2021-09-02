@@ -1,0 +1,15 @@
+[2021-08-16 13:58:54,778] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2201: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/morningStaging", CM_morningStaging))
+
+[2021-08-16 13:58:54,795] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: message_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-16 13:58:54,796] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: channel_post_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-16 13:58:54,796] (WARNING) D:\Software\Programming_Software\Python\lib\site-packages\telegram\ext\regexhandler.py:121: TelegramDeprecationWarning: edited_updates is deprecated. See https://git.io/fxJuV for more info
+  edited_updates=edited_updates)
+
+[2021-08-16 13:58:54,796] (WARNING) D:/program/OperationalTelegram/src/telegramBot.py:2202: TelegramDeprecationWarning: RegexHandler is deprecated. See https://git.io/fxJuV for more info
+  updater.dispatcher.add_handler(RegexHandler("/nightStaging", CM_nightStaging))
+

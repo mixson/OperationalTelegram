@@ -1,0 +1,25 @@
+[2020-12-24 11:03:48,247 INFO 2020-12-24 11:03:35.727298]
+[2020-12-24 11:04:04,762 INFO 2020-12-24 11:04:00.319910]
+[2020-12-24 11:04:04,762 INFO 2020-12-24 11:04:00.319910]
+[2020-12-24 11:04:45,007] (INFO) Hello World
+[2020-12-24 11:16:54,149] (INFO) 2020-12-24 11:16:50.172170
+[2020-12-24 11:16:55,897] (INFO) Hello World
+[2020-12-24 11:16:55,897] (INFO) Hello World
+[2020-12-24 11:17:26,920] (INFO) 2020-12-24 11:17:26.919488 -- {'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:18:00,716] (INFO) Hello World || {'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:18:06,906] (INFO) start: 1200end: 1345 || {'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:18:06,906] (INFO) start: 1200end: 1345 || {'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:19:30,732] (INFO) start: 1200 end: 1345 
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:20:21,548] (INFO) Hello World
+{'id': 1168065307, 'type': 'private', 'first_name': 'Hand', 'last_name': 'some'}
+[2020-12-24 11:20:21,548] (INFO) Hello World
+{'id': 1168065307, 'type': 'private', 'first_name': 'Hand', 'last_name': 'some'}
+[2020-12-24 11:25:23,201] (INFO) 2020-12-24 11:25:23.199887
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:25:48,553] (INFO) start: 1200 end: 1345 
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 11:25:48,553] (INFO) start: 1200 end: 1345 
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}
+[2020-12-24 12:44:25,390] (INFO) Hello World
+{'id': 149426409, 'type': 'private', 'username': 'itmixso', 'first_name': 'Mixson'}

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<MRTAConfig>
+    <!-- 分配库精度 默认1-->
+    <MRAT_ACCURACY>1</MRAT_ACCURACY>
+    <!-- 分配惯性系数 默认20000-->
+    <MRTA_INERTIA>20000</MRTA_INERTIA>
+    <!-- 每个工作台的最大小车数量  默认5-->
+    <MRTA_QUOTA>5</MRTA_QUOTA>
+    <!-- 工人拣货一次所需要的代价 默认10-->
+    <MRTA_PICK_COST>300000</MRTA_PICK_COST>
+    <!-- 工人等待小车的代价放大系数 默认1000-->
+    <MRTA_WAIT_SCALE>10</MRTA_WAIT_SCALE>
+    <!-- 设置低电量阈值-->
+    <MRTA_BAT_LOW>55</MRTA_BAT_LOW>
+    <!-- 设置正常电量阈值-->
+    <MRTA_BAT_NORM>70</MRTA_BAT_NORM>
+    <!-- 设置高电量阈值-->
+    <MRTA_BAT_HIGH>80</MRTA_BAT_HIGH>
+    <!-- 设置充电时间 默认12000-->
+    <MRTA_CHARGE_T>1200</MRTA_CHARGE_T>
+    <!-- 是否开启顺序出库： 0-否，2-是 -->
+    <MRTA_SPOT_TYPE>0</MRTA_SPOT_TYPE>
+    <!-- 日志输出 0-RCS，1-MRTA, 2-不打印日志 -->
+    <MRTA_LOG_IN>0</MRTA_LOG_IN>
+    <!-- 充电响应时长的阈值（秒） -->
+    <MRTA_ECHO_TIME>600</MRTA_ECHO_TIME>
+    <!-- 超时不换车超时时长 默认2000（秒） -->
+    <MRTA_CUT_TIME>2000</MRTA_CUT_TIME>
+    <!-- 闲时充电模式（0-关闭，1-开启），高于阈值的agv也能去充电至满电量 -->
+    <MRTA_IDLE_CHARGE_MODE>0</MRTA_IDLE_CHARGE_MODE>
+	<!-- 调度库是否也管理分配空闲车，1为管§理，0为不管理，默认为0 -->
+	<MRTA_IDLE_PARK>1</MRTA_IDLE_PARK>
+	<!-- 配置拣选站额外派车的数量 -->
+	<MRTA_QUEUE_NUM>0</MRTA_QUEUE_NUM>
+	<!-- 低电量自动换车功能，1开启，0关闭 -->
+	<MRTA_DOWN_POD>1</MRTA_DOWN_POD>
+	<!-- 低电量放货架阈值 -->
+	<MRTA_BAT_DOWNPOD>48</MRTA_BAT_DOWNPOD>
+	<!-- 货架缓存功能是否开启，1开启，0关闭 -->
+	<MRTA_BUFFER_MODE>1</MRTA_BUFFER_MODE>	
+	<!-- 30min延迟拣选功能是否开启，1开启，0关闭 -->
+	<MRTA_LATE_PICK_MODE>0</MRTA_LATE_PICK_MODE>
+	<!-- 缓存开始计时，上午 -->
+	<MRTA_SET_T>1000</MRTA_SET_T>
+	<!-- 缓存释放开始计时，上午 -->
+	<MRTA_SET_PICK_T>1100</MRTA_SET_PICK_T>
+	<!-- 缓存开始计时，下午 -->
+	<MRTA_SET_T_PM>700</MRTA_SET_T_PM>
+	<!-- 缓存释放开始计时，下午 -->
+	<MRTA_SET_PICK_T_PM>2300</MRTA_SET_PICK_T_PM> 
+	<!--MRTA_OUT_COST>200000</MRTA_OUT_COST-->
+	<!--MRTA_NUM_AREA1>40</MRTA_NUM_AREA1-->
+	
+
+	
+
+		
+	<!-- 新的配置模板 
+	<Index = "50" Value = "100" Name = "配置字段的描述" />
+	-->
+	
+</MRTAConfig>

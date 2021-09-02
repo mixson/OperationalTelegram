@@ -1,0 +1,74 @@
+[2021-09-02 14:36:01,347] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 31, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 44, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 14:36:01,348] (ERROR) tuple index out of range
+[2021-09-02 14:36:24,088] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 31, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 44, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 14:36:24,096] (ERROR) tuple index out of range
+[2021-09-02 14:36:55,953] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 31, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 44, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 14:36:55,953] (ERROR) tuple index out of range
+[2021-09-02 14:38:00,995] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 31, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 44, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 14:38:00,996] (ERROR) tuple index out of range
+[2021-09-02 14:40:23,906] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 31, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 44, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 14:40:23,906] (ERROR) tuple index out of range
+[2021-09-02 15:22:52,415] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 29, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 42, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 15:22:52,415] (ERROR) tuple index out of range
+[2021-09-02 15:23:12,591] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 29, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 42, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 15:23:12,591] (ERROR) tuple index out of range
+[2021-09-02 15:23:42,597] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 29, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 42, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 15:23:42,598] (ERROR) tuple index out of range
+[2021-09-02 15:23:52,558] (ERROR) Traceback (most recent call last):
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 29, in inner_function
+    return func(*args, **kwargs)
+  File "D:/program/OperationalTelegram/src/dailyRoute.py", line 42, in inner_function
+    update = args[1]
+IndexError: tuple index out of range
+
+[2021-09-02 15:23:52,558] (ERROR) tuple index out of range
+[2021-09-02 15:28:07,786] (INFO) RF_dailyStaging: Open Staging,  setting: 2021-09-02 15:27:00.783344 to 2021-09-02 15:30:00.783344
+[2021-09-02 15:30:07,830] (INFO) RF_dailyStaging: Close Staging,  setting: 2021-09-02 15:27:00.828578 to 2021-09-02 15:30:00.828578 , step By step (True)
