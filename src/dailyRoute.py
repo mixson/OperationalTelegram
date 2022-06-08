@@ -252,19 +252,27 @@ def RF_dailyStaging(*args):
 
         # close Staging
         if not withInRange(now, startDateTime, endDateTime):
-            if txtStagingTime["start"] == startEditTime and txtStagingTime["end"] == endEditTime:
 
+            if txtStagingTime["start"] == startEditTime and txtStagingTime["end"] == endEditTime:
                 logger = getLogger()
                 logger.info(
                     "RF_dailyStaging: {},  setting: {} to {} , step By step ({})".format("Close Staging", startDateTime, endDateTime, stepBystep))
-                if not stepBystep:
+
+                if startEditTime == "-1" and endEditTime == "-1": # exceptional case
+                    continue
+
+
+                #Main Edit
+                if stepBystep:
+                    editsStaging([startCheckTime, endCheckTime])
+                else:
                     editsStaging([-1, -1])
                 print("{} - {} edit cancel".format(startTime, endTime))
 
                 # adding staging Queue Inspection
-                idDateTimeStr = "{}to{}".format(startDateTime.strftime("%Y-%m-%d %H:%M:%S"), endDateTime.strftime("%Y-%m-%d %H:%M:%S"))
-                startId = "{}_{}".format(idDateTimeStr, "0")
-                endId = "{}_{}".format(idDateTimeStr, "1")
+                # idDateTimeStr = "{}to{}".format(startDateTime.strftime("%Y-%m-%d %H:%M:%S"), endDateTime.strftime("%Y-%m-%d %H:%M:%S"))
+                # startId = "{}_{}".format(idDateTimeStr, "0")
+                # endId = "{}_{}".format(idDateTimeStr, "1")
 
                 # addStagingNumMonitor(startId, "midnight", 10)
                 # addStagingNumMonitor(endId, "default", 0)
@@ -617,10 +625,85 @@ def clearStagingNumMonitor():
 #
 #             print("{} active".format(queueSetName))
 
+
+@exception_handler
+def RF_dailyBatteryRecord(*args):
+    autoBatteryRecordimeList = [{}, {}]
+    autoBatteryRecordimeList = args[0]
+    now = datetime.datetime.now()
+    for recordTimeDateTime in autoBatteryRecordimeList:
+        print("")
+        #
+
 def handleMsg(msg, bot, update):
     pass
 
+@exception_handler
+def RF_dailyStaging(*args):
+    autoStatingTimeList = args[0]
+    now = datetime.datetime.now()
+    for timeRangeDict in autoStatingTimeList:
+        isNight = isNightStaging(timeRangeDict)
 
+        if isNight:
+            editsStaging = editsStagingNight
+            getStagingTime = getNightStagingTime
+        else:
+            editsStaging = editsStagingMorning
+            getStagingTime = getMorningStagingTime
+
+        startTime = str((timeRangeDict["start"]))
+        startMinute = int(startTime[-2:])
+        startHour = int(startTime[:-2])
+        startDateTime = now.replace(hour=startHour, minute=startMinute, second=0)
+
+        startCheckTime = startTime
+        startEditTime = startCheckTime
+
+        endTime = str((timeRangeDict["end"]))
+        endMinute = int(endTime[-2:])
+        endHour = int(endTime[:-2])
+        endDateTime = now.replace(hour=endHour, minute=endMinute, second=0)
+
+        endCheckTime = endTime
+        endEditTime = str(int(endCheckTime) + 100)
+
+        print(startTime, endTime)
+
+        stepBystep = False
+        if "stepBystep" in timeRangeDict.keys() and timeRangeDict["stepBystep"]:
+            stepBystep = True
+
+        txtStagingTime = getStagingTime()
+
+        # open Staging
+        if withInRange(now, startDateTime, endDateTime):
+            if txtStagingTime["start"] != startEditTime and txtStagingTime["end"] != endEditTime:
+
+                logger = getLogger()
+                logger.info(
+                    "RF_dailyStaging: {},  setting: {} to {}".format("Open Staging", startDateTime, endDateTime))
+                editsStaging([startEditTime, endEditTime])
+                print("{} - {} edit start".format(startTime, endTime))
+
+        # close Staging
+        if not withInRange(now, startDateTime, endDateTime):
+
+            if txtStagingTime["start"] == startEditTime and txtStagingTime["end"] == endEditTime:
+                logger = getLogger()
+                logger.info(
+                    "RF_dailyStaging: {},  setting: {} to {} , step By step ({})".format("Close Staging", startDateTime, endDateTime, stepBystep))
+
+                if startEditTime == "-1" and endEditTime == "-1": # exceptional case
+                    continue
+
+
+                #Main Edit
+                if stepBystep:
+                    editsStaging([startCheckTime, endCheckTime])
+                else:
+                    editsStaging([-1, -1])
+                print("{} - {} edit cancel".format(startTime, endTime))
 def main():
 
     while True:

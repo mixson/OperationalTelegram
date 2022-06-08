@@ -1,4 +1,4 @@
-from utils.Web_Rcs import Web_RCS
+from utils.Web_Rcs_14_04_22 import Web_RCS
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, RegexHandler
@@ -18,7 +18,7 @@ import json
 
 from values import RCS_CONSTANT
 from values.CONSTANT import INVERSE_BOUND_AREA, DATETIME_FORMAT
-from utils.Web_Rcs import Web_RCS
+from utils.Web_Rcs_14_04_22 import Web_RCS
 
 
 # dict data Structure

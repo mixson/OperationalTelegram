@@ -7,10 +7,10 @@ MRTA_CONFIG_LOCATION = r"D:\program\OperationalTelegram\values\rcs_mrta_config.x
 STAGINGPICKE_FILENAME = "dailyStaging.pkl"
 QUEUEPICKE_FILENAME = "dailyStaging.pkl"
 
-# ROUTE_FILENAME_DICT = {"dailyStaging": "dailyStaging.pkl", "RF_dailyStagingV2": "RF_dailyStagingV2.pkl",
-#                        "queueNumberKeep": "queueNumberKeep.pkl", "queueSetEdit": "queueSetEdit.pkl", "stagingNumMonitor": "stagingNumMonitor.pkl"}
-ROUTE_FILENAME_DICT = {"dailyStaging": "dailyStaging.pkl"
-                       } # debug
+ROUTE_FILENAME_DICT = {"dailyStaging": "dailyStaging.pkl", "RF_dailyStagingV2": "RF_dailyStagingV2.pkl",
+                       "queueNumberKeep": "queueNumberKeep.pkl", "queueSetEdit": "queueSetEdit.pkl", "stagingNumMonitor": "stagingNumMonitor.pkl"}
+# ROUTE_FILENAME_DICT = {"dailyStaging": "dailyStaging.pkl"
+#                        } # debug
 # ROUTE_FILENAME_DICT = { "queueSetEdit": "queueSetEdit.pkl"}
 SUBSCIRPTION_DICT = {"queueChangeNotification": "queueChangeNotification.pkl", "stagingChangeNotification": "stagingChangeNotification.pkl", "stationChangeNotification": "stationChangeNotification.pkl"}
 

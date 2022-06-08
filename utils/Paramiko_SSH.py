@@ -26,10 +26,10 @@ class SSH_Connection:
             raise Exception("Connection False")
         return self
 
-    def exec(self, command):
+    def exec(self, command, timeout=None):
         if not self.connected:
             raise Exception("Please connect host before execute command")
-        stdin, stdout, stder = self.client.exec_command(command, get_pty=True)
+        stdin, stdout, stder = self.client.exec_command(command, get_pty=True, timeout=timeout)
         output = ""
         try:
             output = stdout.read().decode("utf-8")
@@ -66,6 +66,32 @@ class LowerBatteryService():
         ssh = SSH_Connection()
         ssh.connect(self.params["ipAddress"], 22, "root", "hiklinux")
         output = ssh.exec(self.cmd)
+        return output
+
+
+class ShutDownAGVService():
+    def __init__(self):
+        self.params = {}
+        self._initParam()
+
+    def _initParam(self):
+        self.params["param.clientCode"] = ""
+        self.params["ipAddress"] = ""
+        self.cmd = ""
+
+    def setAGVIP(self, ipAddress):
+        self.params["ipAddress"] = ipAddress
+        return self
+
+    def shutdownAGV(self):
+        self.cmd = "/sbin/halt"
+        # self.cmd = "/sbin/date"
+        return self
+
+    def sendJSON(self):
+        ssh = SSH_Connection()
+        ssh.connect(self.params["ipAddress"], 22, "root", "hiklinux")
+        output = ssh.exec(self.cmd, timeout=10)
         return output
 
 def putty_cmd(ip, account, pw, cmd_file):

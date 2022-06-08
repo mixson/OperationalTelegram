@@ -35,7 +35,7 @@ import traceback
 
 from values import RCS_CONSTANT
 from values.CONSTANT import INVERSE_BOUND_AREA, DATETIME_FORMAT, WORKING_STATION_DIVIDE, STATION_QUEUE_NUM
-from utils.Web_Rcs import Web_RCS
+from utils.Web_Rcs_14_04_22 import Web_RCS
 
 
 loggingDirPath = os.path.join(currentDir, "log")

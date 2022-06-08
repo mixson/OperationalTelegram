@@ -6,7 +6,8 @@ sys.path.insert(0, currentDir)
 # updater = Updater(token='1407640777:AAG1zlyYfk7QVpIJQonTv28TQG2dQM6jC9U', use_context=False) # production bot
 # updater = Updater(token='1323516378:AAFEbQrv0AH8kZ3TU7dqq4ApO76pbqGMVvE', use_context=False) # testing bot
 # updater = Updater(token='1828434617:AAEWhEfrq2eJt7TnF14EVBqmAdjDedsWctg', use_context=False) # jim_jim bot
-updater = Updater(token='1972257715:AAFo_buHhYp81NpQjS1ZwaeAg7gvGyOjMR4', use_context=False) #  d!R@tf+3^y\C bot(production)
+# updater = Updater(token='1972257715:AAFo_buHhYp81NpQjS1ZwaeAg7gvGyOjMR4', use_context=False) #  d!R@tf+3^y\C bot(production)
+updater = Updater(token='5201936161:AAHPaj3wYQq1SA-io7ZmNOE_xg0IepnZyqs', use_context=False) #  bZRfAnnUnx_bot(production)
 
 
 import ast
@@ -21,7 +22,7 @@ import traceback
 from values import RCS_CONSTANT
 from values.CONSTANT import INVERSE_BOUND_AREA, DATETIME_FORMAT, WORKING_STATION_DIVIDE, STATION_QUEUE_NUM
 from utils.Web_Rcs import Web_RCS
-from utils.Paramiko_SSH import LowerBatteryService
+from utils.Paramiko_SSH import LowerBatteryService, ShutDownAGVService
 
 buttonDictwithoutParams = {"show time": "CM_showTime",
                            "hello World": "CM_helloWorld",
@@ -2518,6 +2519,202 @@ def CM_getAGVStatus(bot, update):
 
     handleMsg(bot, update, msg)
     return msg
+
+
+def getErrorSendingList(startTimeStr, endTimeStr):
+    loginService = Web_RCS.LoginService()
+    loginService.runService()
+
+    taskSentMessageService = Web_RCS.TaskSentMessageService()
+    taskSentMessageService.setEndTimeFrom(startTimeStr).setEndTimeTo(endTimeStr)
+    taskSentMessageService.setSendStatus("Error sending")
+
+    response = taskSentMessageService.sendJSON()
+    dataList = json.loads(response.text)["data"]
+
+    taskSentMessageService.setSendStatus("Sending")
+    response = taskSentMessageService.sendJSON()
+    sendingDataList = json.loads(response.text)["data"]
+
+    return dataList + sendingDataList
+
+
+@exception_handler
+@logUserRecord
+def CM_getErrorSending(bot, update):
+    endTime = datetime.datetime.now()
+    startTime = endTime - datetime.timedelta(days=1)
+
+    startTimeStr = startTime.strftime(DATETIME_FORMAT)
+    endTimeSTr = endTime.strftime(DATETIME_FORMAT)
+
+    dataList = getErrorSendingList(startTimeStr, endTimeSTr)
+
+    msg = "{}\n".format(endTimeSTr)
+
+    for i in range(len(dataList)-1, -1, -1):
+        data = dataList[i]
+        msg += "dateCr: {}\n dateChg: {}\n rcptStatusStr: {}\n reqMsg: {}\n reqTypStr: {}\n sendMsg: {}\n taskCode:{}\n\n\n".format(
+            data["dateCr"], data["dateChg"], data["rcptStatusStr"], data["reqMsg"], data["reqTypStr"], data["sendMsg"], data["taskCode"]
+        )
+
+    handleMsg(bot, update, msg)
+    return msg
+
+def getOnlineAGVDictList(agvStr):
+    deviceStatusQueryService = Web_RCS.DeviceStatusQueryService()
+    deviceStatusQueryService.setMapShortName("PnS")
+    if agvStr == "-1" or agvStr == -1:
+        deviceStatusQueryService.setRobotCode(agvStr)
+    else:
+        deviceStatusQueryService.setRobotList(agvStr)
+    result = json.loads(deviceStatusQueryService.sendJSON().text)
+    agvCloseList = result["data"]
+    return agvCloseList
+
+@exception_handler
+@logUserRecord
+def CM_getOnlineAGVDictList(bot, update):
+    msg = "{}:\n".format(datetime.datetime.now())
+    logger = getLogger()
+
+    loginService = Web_RCS.LoginService()
+    loginService.runService()
+
+    agvListService = Web_RCS.AGVListService()
+    agvListResult = json.loads(agvListService.sendJSON().text)
+    totalNumberOfAGV = len(agvListResult["data"])
+
+
+    agvCloseList = getOnlineAGVDictList("-1") # all agv
+    print("")
+
+    numberOfActiveAGV = len(agvCloseList)
+
+    if numberOfActiveAGV/totalNumberOfAGV > 0.1:
+        msg += "{}/{} : AGV percentage is not low enough to activate function".format(numberOfActiveAGV, totalNumberOfAGV)
+        handleMsg(bot, update, msg)
+        return msg
+
+    # agvCloseList = getOnlineAGVDictList(",".join(agvCloseList)) # all agv
+    keyList = ["robotCode", "robotIp", "battery", "statusStr", "excludeStr", "taskCode", "posX", "posY"]
+
+    # shutDownAGVService = ShutDownAGVService()
+
+    for agvDict in agvCloseList:
+        for key in keyList:
+            if key not in agvDict.keys():
+                continue
+            msg += "{}: {}\t".format(key, agvDict[key])
+        msg += "\n"
+
+    handleMsg(bot, update, msg)
+    return msg
+
+
+@exception_handler
+@logUserRecord
+def CM_haltAGV(bot, update):
+    msg = "{}:\n".format(datetime.datetime.now())
+
+    logger = getLogger()
+    inputText = update.message.text
+
+    userInfoLog = str(update.effective_message.chat)
+    loggingMsg = "{}\n{}".format(inputText, userInfoLog)
+    logger.debug(loggingMsg)
+
+    clearedInputText = inputText.split(" ")[1:]
+
+    agvCloseList = clearedInputText
+
+    shutDownAGVService = ShutDownAGVService()
+
+    loginService = Web_RCS.LoginService()
+    loginService.runService()
+
+    print(",".join(agvCloseList))
+    agvOnlineCloseList = getOnlineAGVDictList(",".join(agvCloseList)) # all agv
+    keyList = ["robotCode", "robotIp", "battery", "statusStr", "excludeStr", "taskCode", "posX", "posY"]
+
+    for agvDict in agvOnlineCloseList:
+        for key in keyList:
+            if key not in agvDict.keys():
+                continue
+            msg += "{}: {}\t".format(key, agvDict[key])
+        msg += "\n"
+        shutDownAGVService.setAGVIP(agvDict["robotIp"]).shutdownAGV()
+        result = shutDownAGVService.sendJSON()
+
+    agvCloseList = getOnlineAGVDictList(",".join(agvCloseList)) # all agv
+    keyList = ["robotCode", "robotIp", "battery", "statusStr", "excludeStr", "taskCode", "posX", "posY"]
+
+    for agvDict in agvCloseList:
+        for key in keyList:
+            if key not in agvDict.keys():
+                continue
+            msg += "{}: {}\t".format(key, agvDict[key])
+        msg += "\n"
+
+
+    update.message.reply_text(msg, parse_mode='Markdown')
+    return msg
+
+@exception_handler
+@logUserRecord
+def CM_haltRemainingAGV(bot, update):
+    msg = "{}:\n".format(datetime.datetime.now())
+    logger = getLogger()
+
+    loginService = Web_RCS.LoginService()
+    loginService.runService()
+
+    agvListService = Web_RCS.AGVListService()
+    agvListResult = json.loads(agvListService.sendJSON().text)
+    totalNumberOfAGV = len(agvListResult["data"])
+
+
+    agvCloseList = getOnlineAGVDictList("-1") # all agv
+    print("")
+
+    numberOfActiveAGV = len(agvCloseList)
+
+    if numberOfActiveAGV/totalNumberOfAGV > 0.1:
+        msg += "{}/{} : AGV percentage is not low enough to activate function".format(numberOfActiveAGV, totalNumberOfAGV)
+        handleMsg(bot, update, msg)
+        return msg
+
+    # agvCloseList = getOnlineAGVDictList(",".join(agvCloseList)) # all agv
+    keyList = ["robotCode", "robotIp", "battery", "statusStr", "excludeStr", "taskCode", "posX", "posY"]
+
+    shutDownAGVService = ShutDownAGVService()
+
+    for agvDict in agvCloseList:
+        for key in keyList:
+            if key not in agvDict.keys():
+                continue
+            msg += "{}: {}\t".format(key, agvDict[key])
+        msg += "\n"
+        shutDownAGVService.setAGVIP(agvDict["robotIp"]).shutdownAGV()
+        # print("debug")
+        result = shutDownAGVService.sendJSON()
+
+    msg += "After closed AGV\n"
+    agvCloseList = getOnlineAGVDictList(",".join(agvCloseList)) # all agv
+    keyList = ["robotCode", "robotIp", "battery", "statusStr", "excludeStr", "taskCode", "posX", "posY"]
+
+    for agvDict in agvCloseList:
+        for key in keyList:
+            if key not in agvDict.keys():
+                continue
+            msg += "{}: {}\t".format(key, agvDict[key])
+        msg += "\n"
+
+
+    # update.message.reply_text(msg, parse_mode='Markdown')
+    handleMsg(bot, update, msg)
+    return msg
+
 
 
 if __name__ == "__main__":

@@ -1261,6 +1261,37 @@ class Web_RCS:
             result = Web_RCS.SESSION.post(self.getDestination(), data=self.params)
             return result
 
+    class DeviceStatusQueryService(Service_Interface):
+        def __init__(self):
+            super().__init__()
+            self.serviceLocation = "/web/agvControl!getAgvStatus.action"
+            self.params = {}
+            self._initParam()
+
+        def _initParam(self):
+            self.params["param.clientCode"] = ""
+            self.params["param.robotCount"] = ""
+            self.params["param.mapShortName"] = ""
+            self.params["robots"] = -1
+
+
+        def setMapShortName(self, mapShortName):
+            self.params["param.mapShortName"] = mapShortName
+            return self
+
+        def setRobotCode(self, robotCount):
+            self.params["param.robotCount"] = robotCount
+            return self
+
+        def setRobotList(self, robotStr):
+            self.params["robots"] = robotStr
+            return self
+
+
+        def sendJSON(self):
+            result = Web_RCS.SESSION.post(self.getDestination(), data=self.params)
+            return result
+
 class RCS_SUPPORT:
 
     @staticmethod

@@ -41,13 +41,13 @@
 	<!-- 30min延迟拣选功能是否开启，1开启，0关闭 -->
 	<MRTA_LATE_PICK_MODE>0</MRTA_LATE_PICK_MODE>
 	<!-- 缓存开始计时，上午 -->
-	<MRTA_SET_T>1100</MRTA_SET_T>
+	<MRTA_SET_T>-1</MRTA_SET_T>
 	<!-- 缓存释放开始计时，上午 -->
-	<MRTA_SET_PICK_T>1127</MRTA_SET_PICK_T>
+	<MRTA_SET_PICK_T>-1</MRTA_SET_PICK_T>
 	<!-- 缓存开始计时，下午 -->
-	<MRTA_SET_T_PM>1527</MRTA_SET_T_PM>
+	<MRTA_SET_T_PM>1200</MRTA_SET_T_PM>
 	<!-- 缓存释放开始计时，下午 -->
-	<MRTA_SET_PICK_T_PM>1630</MRTA_SET_PICK_T_PM>             
+	<MRTA_SET_PICK_T_PM>1355</MRTA_SET_PICK_T_PM>              
 	<!--MRTA_OUT_COST>200000</MRTA_OUT_COST-->
 	<!--MRTA_NUM_AREA1>40</MRTA_NUM_AREA1-->
 	
